@@ -28,7 +28,7 @@ public class Notebook {
         this.name = name;
     }
 
-    public Notebook(UUID id, String name) {
+    public Notebook(String id, String name) {
         this();
         if (id != null) {
             this.id = UUID.randomUUID();
