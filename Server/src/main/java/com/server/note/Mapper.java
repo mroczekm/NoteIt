@@ -17,8 +17,8 @@ public class Mapper {
         this.notebookRepository = notebookRepository;
     }
 
-    public NoteViewModel convertToNoteViewModel(Note entity){
-        var viewModel= new NoteViewModel();
+    public NoteViewModel convertToNoteViewModel(Note entity) {
+        var viewModel = new NoteViewModel();
         viewModel.setTitle(entity.getTitle());
         viewModel.setId(entity.getId().toString());
         viewModel.setLastModifiedOn(entity.getLastModifiedOn());
@@ -30,7 +30,7 @@ public class Mapper {
 
     public Note convertToNoteEntity(NoteViewModel viewModel) {
         var notebook = this.notebookRepository.findById(UUID.fromString(viewModel.getNotebookId())).get();
-        var entity = new Note(UUID.fromString(viewModel.getId()), viewModel.getTitle(), viewModel.getText(), notebook);
+        var entity = new Note(viewModel.getId(), viewModel.getTitle(), viewModel.getText(), notebook);
 
         return entity;
     }
@@ -45,9 +45,6 @@ public class Mapper {
     }
 
     public Notebook convertToNotebookEntity(NotebookViewModel viewModel) {
-/*        if(viewModel.getId() == null){
-            viewModel.setId(UUID.randomUUID().toString());
-        }*/
         var entity = new Notebook(viewModel.getId(), viewModel.getName());
 
         return entity;

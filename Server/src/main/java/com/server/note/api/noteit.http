@@ -17,7 +17,8 @@ Content-Type: application/json
 
 {
   "name": "Personal",
-  "color": "#000000"
+  "color": "#000000",
+  "id": "1c560773-e9f2-4190-bae5-0b4d9a349ba3"
 }
 ###
 
@@ -46,7 +47,7 @@ Content-Type: application/json
 }
 ###
 
-DELETE {{host-url}}//notes/5d6e01a8-ae61-4303-8385-28c0621cfaaf
+DELETE {{host-url}}//notes/6a411550-fa34-4b45-8a98-7dea0327679b
 
 ###
 

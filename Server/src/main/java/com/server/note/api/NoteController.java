@@ -53,7 +53,7 @@ public class NoteController {
         return noteViewModel;
     }
 
-    @GetMapping("/ByNotebook/{notebookId}")
+    @GetMapping("/byNotebook/{notebookId}")
     public List<NoteViewModel> byNotebook(@PathVariable String notebookId){
         List<Note> notes = new ArrayList<>();
 
@@ -82,7 +82,7 @@ public class NoteController {
         return noteEntity;
     }
 
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable String id){
         this.noteRepository.deleteById(UUID.fromString(id));
     }

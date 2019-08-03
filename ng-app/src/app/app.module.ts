@@ -11,6 +11,7 @@ import {Route, RouterModule, Routes} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ApiService} from "./shared/api.service";
+import { NoteComponent } from './notes/note/note.component';
 
 const appRoutes : Routes = [
   {
@@ -38,7 +39,8 @@ const appRoutes : Routes = [
     NavigationComponent,
     FeedbackComponent,
     NotesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,

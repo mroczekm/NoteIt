@@ -30,7 +30,7 @@ public class Notebook {
 
     public Notebook(String id, String name) {
         this();
-        if (id != null) {
+        if (id == null) {
             this.id = UUID.randomUUID();
         }
         this.name = name;
