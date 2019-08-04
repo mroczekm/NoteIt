@@ -7,7 +7,7 @@ import {Note} from "../notes/Model/note";
 
 @Injectable()
 export class ApiService {
-  private BASE_URL = "http://localhost:8082/api/";
+  private BASE_URL = window["cnfApiBaseUrl"] + "/api";
   private ALL_NOTEBOOKS_URL = `${this.BASE_URL}\\notebooks\\all`;
   private SAVE_UPDATE_NOTEBOOK = `${this.BASE_URL}\\notebooks`;
   private DELETE_UPDATE_NOTEBOOK = `${this.BASE_URL}\\notebooks\\`;

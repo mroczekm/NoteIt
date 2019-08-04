@@ -5,10 +5,18 @@
   <title>NgApp</title>
   <base href="/">
 
+  <script type="text/javascript">
+      var cnfApiBaseUrl = "http://localhost:8080/noteitservice";
+      /*dev http://localhost:8082*/
+      window.cnfApiBaseUrl = cnfApiBaseUrl;
+
+
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+<app-root></app-root>
 </body>
 </html>
